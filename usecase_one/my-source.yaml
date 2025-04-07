@@ -1,0 +1,15 @@
+apiVersion: v1  
+kind: Source  
+name: event-attendee 
+spec:  
+  kind: SQLServer  
+  properties:  
+    host: sql-server.usecase-drasi-one.svc.cluster.local  
+    port: 1433  
+    user: sa  
+    password: "<YourStrong!Passw0rd>"
+    database: EventManagement
+    encrypt: false  
+    trustServerCertificate: true  
+    tables:  
+      - dbo.Events   

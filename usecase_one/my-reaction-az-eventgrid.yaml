@@ -1,0 +1,11 @@
+apiVersion: v1  
+kind: Reaction  
+name: event-attendee-tracking-reaction-az-eventgrid  
+spec:  
+  kind: EventGrid
+  queries:  
+    event-attendee-tracking:
+  properties:  
+    eventGridUri: https://mydrasitesteventgridtopictwo.eastus-1.eventgrid.azure.net/api/events
+    eventGridKey: <eventGridKey>
+    format: unpacked  

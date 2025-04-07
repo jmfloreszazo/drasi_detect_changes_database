@@ -1,0 +1,12 @@
+apiVersion: v1  
+kind: ContinuousQuery  
+name: event-attendee-tracking  
+spec:  
+  mode: query  
+  sources:  
+    subscriptions:  
+      - id: event-attendee
+  query: >  
+    MATCH (e:Events)  
+    WHERE e.expectedAttendees > 100
+    RETURN e.eventId AS EventID, e.expectedAttendees AS AttendeeCount  

@@ -1,0 +1,14 @@
+apiVersion: v1  
+kind: Reaction  
+name: event-attendee-tracking-reaction-az-sta-queue  
+spec:  
+  kind: StorageQueue
+  queries:  
+    event-attendee-tracking:
+  properties:  
+    queueName: drasitest
+    format: unpacked
+  identity:  
+    kind: ConnectionString  
+    connectionString: <connectionString>
+
