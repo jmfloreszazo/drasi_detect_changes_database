@@ -1,0 +1,11 @@
+apiVersion: v1  
+kind: ContinuousQuery  
+name: iot-tracking-query-avg-last-30s  
+spec:  
+  mode: query  
+  sources:  
+    subscriptions:  
+      - id: iot-tracking-source  
+  query: >  
+    MATCH (e:IoTTemperatureData)
+    RETURN e.temperature AS Temperature

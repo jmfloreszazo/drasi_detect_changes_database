@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Reaction
+name: iot-tracking-debug
+spec:
+  kind: Debug
+  queries:
+    iot-tracking-query-avg-last-30s:
+  endpoints:
+    gateway: 8080    
